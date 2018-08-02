@@ -27,7 +27,7 @@ defmodule Etude.MixProject do
       {:cuttlefish,
        github: "rabbitmq/cuttlefish", branch: "develop", manager: :rebar3, override: true},
       {:goldrush, github: "DeadZen/goldrush", tag: "0.1.9", manager: :rebar3, override: true},
-      {:lager, github: "erlang-lager/lager", override: true},
+      {:lager, github: "erlang-lager/lager", override: true}
     ]
   end
 end

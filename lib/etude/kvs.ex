@@ -19,7 +19,7 @@ defmodule Etude.KVS do
       [] ->
         nil
 
-      [test(value: value)|_] ->
+      [test(value: value) | _] ->
         value
     end
   end
@@ -37,10 +37,12 @@ defmodule Etude.KVS do
   @spec create_table() :: :test
   def create_table do
     :ets.new(:test, [
-      :public, :named_table, :set,
+      :public,
+      :named_table,
+      :set,
       {:keypos, test(:key) + 1},
       {:write_concurrency, true},
-      {:read_concurrency, true}]
-    )
+      {:read_concurrency, true}
+    ])
   end
 end
